@@ -1,0 +1,110 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Node_tree {
+public:
+	int index_law;
+	Node_tree* parent;
+	Node_tree* left;
+	Node_tree* right;
+	Node_external* node_list_external;
+
+	Node_tree(int val) {
+		index_law = val;
+		parent = NULL;
+		left = NULL;
+		right = NULL;
+		node_list_external = NULL;
+	}
+};
+
+class Node_internal {
+public:
+	int date_code;
+	Node_internal* next_list_internal;
+
+	Node_internal(int code){
+		date_code = code;
+		next_list_internal = NULL;
+	}
+};
+
+class Node_external {
+public:
+	Node_internal* node_list_internal;
+	Node_external* next_list_external;
+	int count_per_vehicle_violations;
+
+	Node_external() {
+		count_per_vehicle_violations = 0;
+		node_list_internal = NULL;
+		next_list_external = NULL;
+	}
+};
+
+class List_external {
+private:
+	Node_external* head_list_external;
+	Node_external* tail_list_external;
+	int count_overall_violations;
+
+public:
+	List_external(Node_external* Node_hashtable) {
+		head_list_external = Node_hashtable;
+		tail_list_external = Node_hashtable;
+		count_overall_violations = 0;
+	}
+	
+	void insert(Node_external* Node) {
+		tail_list_external->next_list_external = Node;
+		tail_list_external = Node;
+	}
+};
+
+class List_internal {
+private:
+	Node_internal* head_list_internal;
+	Node_internal* tail_list_internal;
+	int number_of_violations;
+
+public:
+	List_internal() {
+		head_list_internal = NULL;
+		tail_list_internal = NULL;
+		number_of_violations = 0;
+	}
+
+	void insert(int date_code) {
+		Node_internal* temp_list = new Node_internal(date_code);
+		if (head_list_internal == NULL) {
+			head_list_internal = temp_list;
+			tail_list_internal = temp_list;
+		}
+		else {
+			tail_list_internal->next_list_internal = temp_list;
+			tail_list_internal = temp_list;
+		}
+		number_of_violations++;
+	}
+};
+
+class tree {
+private:
+	Node_tree* root;
+	int size_of_tree;
+public:
+	tree() {
+		root = NULL;
+		size_of_tree = 0;
+	}
+
+	void insert(int index_of_violation) {
+		Node_tree* temp_tree = new Node_tree(index_of_violation);
+		Node_tree* current = root;
+		Node_tree* previous = NULL;
+		while (current != NULL) {
+			
+		}
+	}
+};

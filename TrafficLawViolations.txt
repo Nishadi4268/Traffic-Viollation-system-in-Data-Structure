@@ -1,0 +1,19 @@
+0 4000 Driving without a valid fitness certificate
+1 10000 Driving a vehicle without registration
+2 10000 Driving without a driving license
+3 20000 Driving without valid insurance
+4 10000 Driving with wrong number plates
+5 10000 Using any devices while driving
+6 10000 Smoking marijuana while driving
+7 11000 Reckless driving without accident
+8 25000 Car collision by careless driving
+9 2000 Driving without seat belt
+10 5000 Honking in silent zones
+11 10000 Failure to obey traffic signs
+12 5000 Overtaking on the left
+13 9000 Overtaking where the road is not visible
+14 10000 Failure to obey traffic signal
+15 12000 Non-compliance with traffic control sign
+16 12000 Exceeding the speed limit by 16-32 km/h
+17 20000 Exceeding the speed limit by 33-49 km/h
+18 30000 Exceeding the speed limit by 50 km/h or more
